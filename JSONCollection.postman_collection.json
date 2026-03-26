@@ -1,0 +1,221 @@
+{
+  "info": {
+    "_postman_id": "6294b6d6-c567-40e6-8135-953f58adbe9b",
+    "name": "JSON Collection",
+    "description": "User API Documentation\n\nThis API is used to manage user registration, login, and profile.  \nBase URL: [http://localhost:3000/posts](http://localhost:3000/posts)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28132969"
+  },
+  "item": [
+    {
+      "name": "DDT",
+      "item": [
+        {
+          "name": "JSON Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "\r",
+                  "var jsonData = pm.response.json();\r",
+                  "\r",
+                  "// store expected job from CSV into collection variable\r",
+                  "pm.collectionVariables.set(\"expectedJob\", pm.iterationData.get(\"randomJobTitle\"));\r",
+                  "// store actual job from response\r",
+                  "pm.collectionVariables.set(\"actualJob\", jsonData.job);\r",
+                  "console.log(\"POST Expected:\", pm.iterationData.get(\"randomJobTitle\"));\r",
+                  "console.log(\"POST Actual:\", jsonData.job);\r",
+                  "\r",
+                  "// store expected job from CSV into collection variable\r",
+                  "pm.collectionVariables.set(\"expectedvalue\", pm.iterationData.get(\"value\"));\r",
+                  "// store actual job from response\r",
+                  "pm.collectionVariables.set(\"actualvalue\", jsonData.job);\r",
+                  "console.log(\"POST Expected:\", pm.iterationData.get(\"value\"));\r",
+                  "console.log(\"POST Actual:\", jsonData.job);\r",
+                  "\r",
+                  "pm.test(\"JSON Post\", function () {\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    pm.environment.set(\"userId\", jsonData.id);\r",
+                  "});\r",
+                  "pm.execution.setNextRequest(\"JSON Get\")"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"{{randomJobTitle}}\",\r\n  \"views\": \"{{value}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/posts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "JSON Get",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.execution.setNextRequest(\"JSON Put\")\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/posts/{{userId}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts",
+                "{{userId}}"
+              ]
+            },
+            "description": "This API retrieves user details by ID.  \nMethod: GET  \nEndpoint: [http://localhost:3000/posts](http://localhost:3000/posts)"
+          },
+          "response": []
+        },
+        {
+          "name": "JSON Put",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.execution.setNextRequest(\"JSON Delete\")"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"{{$randomJobTitle}}\",\r\n  \"views\": \"{{view}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/posts/{{userId}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts",
+                "{{userId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "JSON Delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.execution.setNextRequest(\"null\")"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/posts/{{userId}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts",
+                "{{userId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "expectedJob",
+      "value": ""
+    },
+    {
+      "key": "actualJob",
+      "value": ""
+    },
+    {
+      "key": "expectedvalue",
+      "value": ""
+    },
+    {
+      "key": "actualvalue",
+      "value": ""
+    }
+  ]
+}
