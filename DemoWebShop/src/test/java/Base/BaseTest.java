@@ -6,6 +6,7 @@ import org.testng.annotations.*;
 
 import Pages.HomePage;
 import Utilities.ConfigReader;
+import Utilities.ListenerUtils;
 import Utilities.WaitUtils;
 
 public class BaseTest {
@@ -16,6 +17,7 @@ public class BaseTest {
     public void setup()
     {
         driver = new ChromeDriver();
+        ListenerUtils.driver = driver;
         driver.manage().window().maximize();
     	WaitUtils.Implicit(driver);
         driver.get(ConfigReader.getProperty("url"));
