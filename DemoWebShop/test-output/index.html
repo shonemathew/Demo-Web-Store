@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Demo_Web_Shop" title="Tests.LoginTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Web_Shop" title="Tests.ProductTest" class="method navigator-link" hash-for-method="productTest">productTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -153,6 +158,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Demo_Web_Shop-class-passed -->
+          <div class="suite-Demo_Web_Shop-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.ProductTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="productTest">
+                  </a> <!-- productTest -->
+                  <span class="method-name">productTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Demo_Web_Shop-class-passed -->
         </div> <!-- panel Demo_Web_Shop -->
         <div panel-name="test-xml-Demo_Web_Shop" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -171,6 +191,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;Tests.RegistrationTest&quot;/&gt;
       &lt;class name=&quot;Tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;Tests.ProductTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Demo Web Shop --&gt;
@@ -184,7 +205,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -210,20 +231,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registerTest')
 data.setCell(0, 2, 'Tests.RegistrationTest')
-data.setCell(0, 3, 11894);
+data.setCell(0, 3, 17618);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginTest')
-data.setCell(1, 2, 'Tests.LoginTest')
-data.setCell(1, 3, 2351);
+data.setCell(1, 1, 'productTest')
+data.setCell(1, 2, 'Tests.ProductTest')
+data.setCell(1, 3, 13947);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginTest')
+data.setCell(2, 2, 'Tests.LoginTest')
+data.setCell(2, 3, 3022);
 window.suiteTableData['Demo_Web_Shop']= { tableData: data, tableDiv: 'times-div-Demo_Web_Shop'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Demo_Web_Shop">
               </div> <!-- times-div-Demo_Web_Shop -->
             </div> <!-- times-div -->
@@ -238,7 +263,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Demo_Web_Shop" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -247,6 +272,15 @@ return data;
                 <span class="ignored-method-name">setup</span>
                 <br/>
                 <span class="ignored-method-name">teardown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Tests.ProductTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">teardown</span>
+                <br/>
+                <span class="ignored-method-name">setup</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -265,21 +299,28 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">registerTest</span>
-                <span class="method-start">12502 ms</span>
+                <span class="method-start">6480 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">24410 ms</span>
+                <span class="method-start">24127 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.ProductTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">productTest</span>
+                <span class="method-start">27162 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">26940 ms</span>
+                <span class="method-start">41348 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

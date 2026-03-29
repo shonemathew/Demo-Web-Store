@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-26T22:51:26 IST" name="Demo Web Shop" finished-at="2026-03-26T22:51:41 IST" duration-ms="14510">
+  <suite started-at="2026-03-29T13:01:31 IST" name="Demo Web Shop" finished-at="2026-03-29T13:02:06 IST" duration-ms="34739">
     <groups>
     </groups>
-    <test started-at="2026-03-26T22:51:26 IST" name="Test" finished-at="2026-03-26T22:51:41 IST" duration-ms="14510">
+    <test started-at="2026-03-29T13:01:31 IST" name="Test" finished-at="2026-03-29T13:02:06 IST" duration-ms="34739">
       <class name="Tests.RegistrationTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.RegistrationTest@bcec361]" started-at="2026-03-26T22:51:14 IST" name="setup" finished-at="2026-03-26T22:51:26 IST" duration-ms="12227" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.RegistrationTest@302552ec]" started-at="2026-03-29T13:01:25 IST" name="setup" finished-at="2026-03-29T13:01:31 IST" duration-ms="6353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registerTest()[pri:0, instance:Tests.RegistrationTest@bcec361]" started-at="2026-03-26T22:51:27 IST" name="registerTest" finished-at="2026-03-26T22:51:39 IST" duration-ms="11894" status="PASS">
+        <test-method signature="registerTest()[pri:0, instance:Tests.RegistrationTest@302552ec]" started-at="2026-03-29T13:01:31 IST" name="registerTest" finished-at="2026-03-29T13:01:49 IST" duration-ms="17618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.RegistrationTest@bcec361]" started-at="2026-03-26T22:51:41 IST" name="teardown" finished-at="2026-03-26T22:51:43 IST" duration-ms="1707" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.RegistrationTest@302552ec]" started-at="2026-03-29T13:02:06 IST" name="teardown" finished-at="2026-03-29T13:02:10 IST" duration-ms="4069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.RegistrationTest -->
+      <class name="Tests.ProductTest">
+        <test-method signature="productTest()[pri:0, instance:Tests.ProductTest@1c1bbc4e]" started-at="2026-03-29T13:01:52 IST" name="productTest" finished-at="2026-03-29T13:02:06 IST" duration-ms="13947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productTest -->
+      </class> <!-- Tests.ProductTest -->
       <class name="Tests.LoginTest">
-        <test-method signature="loginTest()[pri:0, instance:Tests.LoginTest@367ffa75]" started-at="2026-03-26T22:51:39 IST" name="loginTest" finished-at="2026-03-26T22:51:41 IST" duration-ms="2351" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:Tests.LoginTest@ba2f4ec]" started-at="2026-03-29T13:01:49 IST" name="loginTest" finished-at="2026-03-29T13:01:52 IST" duration-ms="3022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->

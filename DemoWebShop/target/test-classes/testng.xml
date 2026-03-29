@@ -12,6 +12,7 @@
         <classes>
             <class name="Tests.RegistrationTest"/>
             <class name="Tests.LoginTest"/>
+            <class name="Tests.ProductTest"></class>
         </classes>
     </test>
 
